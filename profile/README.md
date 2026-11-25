@@ -6,7 +6,6 @@
 
 <p align="center">
   <a href="https://www.yitadynamics.com/cn/">YITA 官网</a> &nbsp;·&nbsp;
-  <a href="https://github.com/PICO4robot">PICO 软件栈</a> &nbsp;·&nbsp;
   <a href="mailto:sales@yitadynamics.com">联系我们</a>
 </p>
 
