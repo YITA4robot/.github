@@ -1,0 +1,115 @@
+name: Bug 报告
+description: 软件、模型或工具链出现可复现的问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交前请先搜索已有 Issue。涉及安全漏洞的内容请勿在此提交，见 [安全策略](https://github.com/PICO4yita/.github/blob/main/SECURITY.md)。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 问题描述
+      description: 简要说明发生了什么，以及你认为正确的行为应该是什么。
+      placeholder: 运行 X 时出现 Y，期望 Z。
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: 相关仓库与版本
+      description: 仓库名 + 版本、提交哈希或 tag。
+      placeholder: PICO-robot @ v3.0.0 / commit abc1234
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      description: 越具体越好，包含完整命令与参数。
+      placeholder: |
+        1. git clone ...
+        2. uv sync
+        3. uv run pico-rl train ... --num-envs 4096
+        4. 观察到 ...
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+      description: 包含错误信息与关键日志。日志较长请使用代码块或附件。
+      render: shell
+    validations:
+      required: true
+
+  - type: dropdown
+    id: robot
+    attributes:
+      label: 机器人平台
+      multiple: true
+      options:
+        - Yita GR3 Mini (v3.0.0)
+        - Yita Alita (v1.0.0)
+        - Yita Alita (v1.0.1)
+        - 仅关节模组，无整机
+        - 不涉及硬件
+        - 其他（在描述中说明）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: joint
+    attributes:
+      label: 涉及的关节模组
+      multiple: true
+      options:
+        - YITA-50P-C
+        - YITA-65P-C
+        - YITA-84P-C
+        - YITA-100P-C
+        - YITA-122P-C
+        - 不涉及
+        - 不确定
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境
+      description: 操作系统、Python/CUDA 版本、MuJoCo 版本、通信方式等。
+      placeholder: |
+        OS: Ubuntu 24.04
+        GPU: RTX 4090 / 驱动 550
+        Python: 3.12
+        MuJoCo: 3.3.x
+        通信: CAN FD (1 Mbps) / EtherCAT
+      render: text
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认
+      options:
+        - label: 我已搜索过已有 Issue，未找到相同问题
+          required: true
+        - label: 我已尝试在最新版本上复现
+          required: true
+        - label: 该问题不涉及安全漏洞（如涉及，我会走私密渠道）
+          required: true

@@ -1,0 +1,58 @@
+name: 功能请求
+description: 建议新能力、新机型支持或流程改进
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        较大的改动（新增机型、更换执行器、修改闭链机构）建议先在此讨论，达成一致后再提交代码。
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 需求背景
+      description: 你遇到了什么问题？现在的方案哪里不够用？
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 期望方案
+      description: 你希望它如何工作？如有接口或配置示例请写出来。
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 涉及范围
+      multiple: true
+      options:
+        - 关节模组驱动 / 通信
+        - 机器人模型（MJCF / URDF）
+        - 运动数据与重定向
+        - 强化学习训练
+        - 部署与整机集成
+        - 工具链与可视化
+        - 文档
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 备选方案
+      description: 你考虑过哪些替代做法？为什么不用？
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充信息
+      description: 参考资料、论文、同类实现、硬件资料链接等。
+    validations:
+      required: false

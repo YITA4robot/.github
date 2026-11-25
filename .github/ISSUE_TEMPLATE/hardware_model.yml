@@ -1,0 +1,77 @@
+name: 机器人模型 / 硬件问题
+description: 整机模型、执行器参数、闭链机构或关节模组硬件相关的问题
+title: "[Model/HW] "
+labels: ["model", "hardware"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **安全提示**：涉及过流、过热、异响、限位失效或急停异常时，请先断电并做物理隔离，再提交问题。硬件故障请联系 YITA 官方技术支持。
+
+  - type: dropdown
+    id: robot
+    attributes:
+      label: 机型
+      options:
+        - Yita GR3 Mini (v3.0.0)
+        - Yita Alita (v1.0.0)
+        - Yita Alita (v1.0.1)
+        - 其他 / 新建机型
+        - 仅关节模组
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 问题类型
+      options:
+        - 模型几何 / 网格
+        - 质量、惯量与质心
+        - 执行器参数（力矩、减速比、armature、kp/kd）
+        - 关节限位与零位
+        - 并联闭链（膝 / 踝 / 腰）
+        - 碰撞体
+        - 通信（CAN FD / EtherCAT）
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 现象、出现条件、观察到的数值与期望值的差异。
+    validations:
+      required: true
+
+  - type: textarea
+    id: setup
+    attributes:
+      label: 硬件与工况
+      description: 关节模组型号与数量、供电电压、通信配置、负载与运动幅度。
+      placeholder: |
+        YITA-100P-C × 4（髋 pitch/roll、膝、腰 yaw）
+        48 V 供电，CAN FD 1 Mbps
+        运动幅度：膝 0 ~ 1.2 rad，周期 1 s
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据
+      description: 模型文件路径与版本、校验脚本输出、日志、截图或视频。
+      render: shell
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认
+      options:
+        - label: 我已确认现场已做安全隔离，问题不会立即造成人身或设备风险
+          required: true
+        - label: 该问题不涉及安全漏洞（如涉及，我会走私密渠道）
+          required: true
