@@ -15,7 +15,7 @@ PICO4yita 组织的公共配置仓库。这里的内容会对组织下所有仓�
 
 ## 维护
 
-组织主页内容与 YITA 官网（[yitadynamics.com](https://www.yitadynamics.com/cn/)）保持表述一致。产品参数、机型规格变更时，同步更新 `profile/README.md`。
+组织主页保持简洁：只放定位、方向和联系方式，**不摆技术参数与机型规格**。产品参数、机型规格放在各代码仓库的文档中。对外表述与 YITA 官网（[yitadynamics.com](https://www.yitadynamics.com/cn/)）保持一致。
 
 修改后预览：本地用任意 Markdown 渲染器查看 `profile/README.md`，合并到 `main` 后组织主页会自动更新。
 
