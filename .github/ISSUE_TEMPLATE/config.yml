@@ -7,5 +7,5 @@ contact_links:
     url: https://github.com/PICO4robot
     about: 模型资产、运动数据、强化学习训练与部署工具。
   - name: 安全漏洞
-    url: https://github.com/PICO4yita/.github/blob/main/SECURITY.md
+    url: https://github.com/YITA4robot/.github/blob/main/SECURITY.md
     about: 请勿公开提交安全问题，按安全策略私密报告。

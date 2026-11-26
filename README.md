@@ -1,10 +1,10 @@
-# PICO4yita · `.github`
+# YITA4robot · `.github`
 
-PICO4yita 组织的公共配置仓库。这里的内容会对组织下所有仓库生效。
+YITA4robot 组织的公共配置仓库。这里的内容会对组织下所有仓库生效。
 
 | 路径 | 作用 |
 | --- | --- |
-| `profile/README.md` | 组织主页展示内容 — [github.com/PICO4yita](https://github.com/PICO4yita) |
+| `profile/README.md` | 组织主页展示内容 — [github.com/YITA4robot](https://github.com/YITA4robot) |
 | `profile/assets/` | 组织主页资源（横幅等） |
 | `.github/ISSUE_TEMPLATE/` | 组织默认 Issue 表单 |
 | `.github/PULL_REQUEST_TEMPLATE.md` | 默认 Pull Request 模板 |
